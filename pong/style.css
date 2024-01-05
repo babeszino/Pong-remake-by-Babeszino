@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #2f7f81;
+  overflow: hidden;
+}
+
+.uto {
+  --pozicio: 50;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid black;
+  top: calc(var(--pozicio) * 1vh);
+  transform: translateY(-50%);
+  width: 1.5vh;
+  height: 12vh;
+  border-style: outside;
+  border-radius: 5%;
+}
+
+.bal {
+  left: 1vw;
+}
+
+.jobb {
+  right: 1vw;
+}
+
+.fal {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid black;
+  width: 2vh;
+  height: 15vh;
+}
+
+.kozep-felso {
+  left: 50%;
+  top: 25%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+.kozep-also {
+  left: 50%;
+  bottom: 25%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+#labda {
+  --x: 50;
+  --y: 50;
+
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid black;
+  left: calc(var(--x) * 1vw);
+  top: calc(var(--y) * 1vh);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.pontok {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 7vh;
+  color: #ffffff;
+  position: fixed;
+  font-family: 'Roboto', sans-serif;
+  bottom: 0;
+  width: 100%;
+}
+
+.pontok > * {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0 2vh;
+  margin: 1vh 0;
+  opacity: .7;
+}
+
+.pontok > :first-child {
+  text-align: right;
+  border-right: .5vh solid #ffffff;
+}
+
+.box {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.box-content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #3ca7a8;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#play-again {
+  background-color: #3ca7a8;
+  border: 1px solid black;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#play-again:hover {
+  background-color: #31888a;
+  border-radius: 5px;
+}

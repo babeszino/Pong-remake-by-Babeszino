@@ -1,0 +1,42 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var username = "<?php echo $_SESSION['username']; ?>";
+    </script>
+    <script src="script.js" type="module"></script>
+    
+    <title>Pong Game Remake by Babeszino</title>
+</head>
+
+<body>
+    <div class="pontok">
+        <div id="jatekos-pont">0</div>
+        <div id="ellenfel-pont">0</div>
+    </div>
+
+    <div class="labda" id="labda"></div>
+    <div class="uto bal" id="jatekos-uto"></div>
+    <div class="uto jobb" id="ellenfel-uto"></div>
+    <div class="fal kozep-felso" id="kozep-felso-fal"></div>
+    <div class="fal kozep-also" id="kozep-also-fal"></div>
+
+    <div class="box" id="box">
+        <div class="box-content">
+            <h2 id="box-felirat"></h2>
+            <button id="play-again">Play again!</button>
+        </div>
+    </div>
+</body>
+
+</html>
